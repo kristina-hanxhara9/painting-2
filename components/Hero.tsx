@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ArrowDown } from 'lucide-react';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const Hero: React.FC = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
@@ -50,7 +52,7 @@ const Hero: React.FC = () => {
             className="w-full h-full object-cover"
             poster="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2000&auto=format&fit=crop"
           >
-            <source src="/videos/media.mp4" type="video/mp4" />
+            <source src={`${BASE_URL}videos/media.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           {/* Dark Overlay for text readability */}

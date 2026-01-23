@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState, useCallback } from 'react';
 import gsap from 'gsap';
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const REVIEWS = [
     {
         id: 1,
@@ -97,7 +99,7 @@ const Reviews: React.FC = () => {
              {/* Background Image Layer - Placeholder */}
              <div className="absolute inset-0 z-0">
                 <img
-                    src="/images/marble-backround.png"
+                    src={`${BASE_URL}images/marble-backround.png`}
                     alt="Marble Background"
                     className="w-full h-full object-cover"
                 />
