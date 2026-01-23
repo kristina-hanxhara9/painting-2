@@ -103,7 +103,7 @@ const Reviews: React.FC = () => {
                     alt="Marble Background"
                     className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-white/85 backdrop-blur-[2px]"></div>
+                <div className="absolute inset-0 bg-white/50"></div>
              </div>
 
             <div className="max-w-6xl mx-auto px-10 md:px-16 relative z-10">

@@ -1,5 +1,7 @@
 import React from 'react';
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const Contact: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -31,9 +33,17 @@ ${message}
   };
 
   return (
-    <section id="contact" className="py-24 bg-luxe-charcoal text-white relative overflow-hidden bg-marble-pattern bg-cover bg-blend-multiply bg-fixed">
+    <section id="contact" className="py-24 text-white relative overflow-hidden">
+        {/* Background Image Layer */}
+        <div className="absolute inset-0 z-0">
+            <img
+                src={`${BASE_URL}images/black-marble.jpeg`}
+                alt="Black Marble Background"
+                className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/60"></div>
+        </div>
         {/* Decorative elements */}
-        <div className="absolute inset-0 bg-black/80 z-0"></div>
         <div className="absolute -top-24 -right-24 w-64 h-64 bg-luxe-yellow rounded-full mix-blend-overlay filter blur-[100px] opacity-20"></div>
 
       <div className="max-w-4xl mx-auto px-10 md:px-16 relative z-10">
